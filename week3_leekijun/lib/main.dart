@@ -4,22 +4,22 @@ import 'musicPlayer.dart';
 
 import 'dart:math';
 
+
 void main() {
-  runApp(const MyApp());
+  runApp(const MusicPlayer());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MusicPlayer(),
-    );
-  }
-}
-
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       // home: MusicPlayer(),
+//     );
+//   }
+// }
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
 
