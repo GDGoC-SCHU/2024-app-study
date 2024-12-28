@@ -1,12 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Weather_App());
+  runApp(Simple_Music_App());
 }
 
-class Weather_App extends StatelessWidget {
-  const Weather_App({super.key});
-
+class Simple_Music_App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -15,33 +15,91 @@ class Weather_App extends StatelessWidget {
       theme: ThemeData(useMaterial3: false),
       home: Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title: const Text("기디언 App"),
+          title: Text("3주차 기디언 Music Player"),
+          backgroundColor: Colors.blue.shade200,
         ),
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "4°C",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+        backgroundColor: Colors.blue.shade300,
+        body: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints viewportConstraints) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: viewportConstraints.maxHeight,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage("assets/images/circles_song.jpg"),
+                        radius: 100,
+                        // child: Image.asset(
+                        //   "assets/images/circles_song.jpg",
+                        // ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Circles",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Post Malone",
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Slider(
+                      value: 0.4,
+                      onChanged: (double value) {},
+                      activeColor: Colors.white,
+                      inactiveColor: Colors.grey,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          icon: Icon(
+                            Icons.fast_rewind,
+                            size: 30,
+                          ),
+                          onPressed: () {},
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        IconButton(
+                          icon: Icon(
+                            Icons.play_arrow,
+                            size: 30,
+                          ),
+                          onPressed: () {},
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        IconButton(
+                          icon: Icon(
+                            Icons.fast_forward,
+                            size: 30,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Chilly",
-                style: TextStyle(fontSize: 20),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                "Jakarta, Indonesia",
-                style: TextStyle(fontSize: 18),
-              )
-            ],
-          ),
+            );
+          },
         ),
       ),
     );
