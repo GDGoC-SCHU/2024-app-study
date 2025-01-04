@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "636289331063",
+    "project_id": "gdsstudytest",
+    "storage_bucket": "gdsstudytest.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636289331063:android:1287f6d2202a6b5df47b72",
+        "android_client_info": {
+          "package_name": "com.week4.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu5sZGx7c8LWCeVnouY7SWQDYVsord3Vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
