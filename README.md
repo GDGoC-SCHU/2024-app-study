@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # gdgstudy
 
 A new Flutter project.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# 2024-app-study
+2024 GDGoc SCHU App Study
+>>>>>>> ca280153d42cbe21739d94ed667665432dcc62b5
